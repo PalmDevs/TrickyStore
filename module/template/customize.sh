@@ -24,6 +24,12 @@ else
   abort    "*********************************************************"
 fi
 
+PIF=/data/adb/modules/playintegrityfix
+if [ -d "$PIF" ]; then
+  ui_print "! PlayIntegrityFix module will be removed on next reboot"
+  touch "$PIF/remove"
+fi
+
 VERSION=$(grep_prop version "${TMPDIR}/module.prop")
 ui_print "- Installing $SONAME $VERSION"
 
