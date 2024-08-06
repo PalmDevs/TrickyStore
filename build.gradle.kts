@@ -29,7 +29,7 @@ val description by extra("A trick of keystore")
 val verName by extra("v1.0.3")
 val verCode by extra(gitCommitCount)
 val commitHash by extra(gitCommitHash)
-val abiList by extra(listOf("armeabi-v7a"))
+val abiList by extra(listOf("arm64-v8a", "armeabi-v7a", "x86_64"))
 
 val androidMinSdkVersion by extra(31)
 val androidTargetSdkVersion by extra(34)
